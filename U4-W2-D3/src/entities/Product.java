@@ -1,5 +1,6 @@
 package entities;
 
+import java.util.Objects;
 import java.util.Random;
 
 public class Product {
@@ -16,5 +17,17 @@ public class Product {
         this.price = price;
         Random random = new Random();
         this.id = random.nextLong();
+    }
+
+
+    //METHODS:
+    @Override
+    public String toString() {
+        return "Product{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", category='" + category + '\'' +
+                ", price=" + price +
+                '}';
     }
 }

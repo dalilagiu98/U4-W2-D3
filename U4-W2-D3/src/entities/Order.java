@@ -26,4 +26,21 @@ public class Order {
         this.products = new ArrayList<>();
         this.customer = customer;
     }
+
+    //METHODS:
+    public void addProduct(Product product) {
+        products.add(product);
+    }
+
+    @Override
+    public String toString() {
+        return "Order{" +
+                "id=" + id +
+                ", status='" + status + '\'' +
+                ", orderDate=" + orderDate +
+                ", deliverDate=" + deliverDate +
+                ", products=" + products +
+                ", customer=" + customer +
+                '}';
+    }
 }

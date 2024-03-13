@@ -16,4 +16,15 @@ public class Customer {
         Random random = new Random();
         this.id = random.nextLong();
     }
+
+    //METHODS:
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", tier=" + tier +
+                '}';
+    }
 }
