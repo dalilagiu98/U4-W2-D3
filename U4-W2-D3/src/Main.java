@@ -78,5 +78,12 @@ public class Main {
         System.out.println("----------------LIST OF PRODUCTS THAT BELONGS TO THE BOOK CATEGORY WITH PRICE > 100-------------");
         List<Product> listBooks = productList.stream().filter(product -> product.getCategory().equals("Book") && product.getPrice() > 100).toList();
         System.out.println(listBooks);
+
+        //-------------------------------------------------EXERCISE 2----------------------------------------------------
+        System.out.println("----------------LIST OF ORDERS WITH PRODUCT THAT BELONGS TO THE BABY CATEGORY-------------");
+        List<Order> orderBabyList = orderList.stream().filter(order -> order.getProducts().stream().anyMatch(product -> product.getCategory().equals("Baby"))).toList();
+        System.out.println(orderBabyList);
+
+
     }
 }
