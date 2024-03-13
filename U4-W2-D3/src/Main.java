@@ -74,5 +74,9 @@ public class Main {
         orderList.addAll(Arrays.asList(aldoOrder, giovanniOrder, giacomoOrder, francoOrder, ciccioOrder));
         System.out.println(orderList);
 
+        //-------------------------------------------------EXERCISE 1----------------------------------------------------
+        System.out.println("----------------LIST OF PRODUCTS THAT BELONGS TO THE BOOK CATEGORY WITH PRICE > 100-------------");
+        List<Product> listBooks = productList.stream().filter(product -> product.getCategory().equals("Book") && product.getPrice() > 100).toList();
+        System.out.println(listBooks);
     }
 }

@@ -23,11 +23,19 @@ public class Product {
     //METHODS:
     @Override
     public String toString() {
-        return "Product{" +
+        return "Product -->" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", category='" + category + '\'' +
                 ", price=" + price +
                 '}';
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public double getPrice() {
+        return price;
     }
 }
