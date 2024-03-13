@@ -91,5 +91,15 @@ public class Main {
             return product;
         }).toList();
         System.out.println(listBoysDiscount);
+
+        //-------------------------------------------------EXERCISE 4----------------------------------------------------
+        System.out.println("----------------LIST OF PRODUCTS ORDERED BY TIER 2 CUSTOMER-------------");
+        List<Order> listOrderTierTwo = orderList.stream().filter(order -> order.getCustomer().getTier() == 2).toList();
+        List<Product> listProductTierTwo = new ArrayList<>();
+        listOrderTierTwo.forEach(order -> listProductTierTwo.addAll(order.getProducts()));
+        System.out.println(listProductTierTwo);
     }
+
+
+
 }

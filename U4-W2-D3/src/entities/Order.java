@@ -47,4 +47,8 @@ public class Order {
     public List<Product> getProducts() {
         return products;
     }
+
+    public Customer getCustomer() {
+        return customer;
+    }
 }
