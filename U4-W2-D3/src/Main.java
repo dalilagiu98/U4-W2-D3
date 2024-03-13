@@ -81,9 +81,15 @@ public class Main {
 
         //-------------------------------------------------EXERCISE 2----------------------------------------------------
         System.out.println("----------------LIST OF ORDERS WITH PRODUCT THAT BELONGS TO THE BABY CATEGORY-------------");
-        List<Order> orderBabyList = orderList.stream().filter(order -> order.getProducts().stream().anyMatch(product -> product.getCategory().equals("Baby"))).toList();
+        List<Order> orderBabyList = orderList.stream().filter(order -> order.getProducts().stream().anyMatch(product -> product.getCategory().equals("Baby"))).toList(); //una volta fatto order.getProducts() ci ritroviamo in un ArrayList, quindi possiamo riutilizzare il metodo .stream() per far partire un nuovo flusso di dati e poter utilizzare i metodi della classe product per tornare la categoria che ci serve.
         System.out.println(orderBabyList);
 
-
+        //-------------------------------------------------EXERCISE 3----------------------------------------------------
+        System.out.println("----------------LIST OF PRODUCTS  THAT BELONGS TO THE BOYS CATEGORY AND APPLY 10% DISCOUNT-------------");
+        List<Product> listBoysDiscount = productList.stream().filter(product -> product.getCategory().equals("Boys")).map(product -> {
+            product.setPrice(product.getPrice() * 0.90);
+            return product;
+        }).toList();
+        System.out.println(listBoysDiscount);
     }
 }
